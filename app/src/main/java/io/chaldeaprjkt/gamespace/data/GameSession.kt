@@ -57,7 +57,6 @@ class GameSession @Inject constructor(
             packageName = sessionName,
             autoBrightness = systemSettings.autoBrightness,
             headsUp = systemSettings.headsUp,
-            threeScreenshot = systemSettings.threeScreenshot,
             ringerMode = audioManager.ringerModeInternal,
         )
         if (appSettings.noHeadsUp) {
@@ -65,9 +64,6 @@ class GameSession @Inject constructor(
         }
         if (appSettings.noAutoBrightness) {
             systemSettings.autoBrightness = false
-        }
-        if (appSettings.noThreeScreenshot) {
-            systemSettings.threeScreenshot = false
         }
         audioManager.ringerModeInternal = appSettings.ringerMode
     }
@@ -79,9 +75,6 @@ class GameSession @Inject constructor(
         }
         if (appSettings.noAutoBrightness) {
             orig.autoBrightness?.let { systemSettings.autoBrightness = it }
-        }
-        if (appSettings.noThreeScreenshot) {
-            orig.threeScreenshot?.let { systemSettings.threeScreenshot = it }
         }
         audioManager.ringerModeInternal = orig.ringerMode
         state = null

@@ -58,18 +58,6 @@ class SystemSettings @Inject constructor(
             )
         }
 
-    var threeScreenshot
-        get() = Settings.System.getIntForUser(
-            resolver, Settings.System.THREE_FINGER_GESTURE, 0,
-            UserHandle.USER_CURRENT
-        ) == 1
-        set(it) {
-            Settings.System.putIntForUser(
-                resolver, Settings.System.THREE_FINGER_GESTURE,
-                it.toInt(), UserHandle.USER_CURRENT
-            )
-        }
-
     var suppressFullscreenIntent
         get() = Settings.System.getIntForUser(
             resolver,

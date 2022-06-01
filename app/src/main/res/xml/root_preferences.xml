@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
     Copyright (C) Chaldeaprjkt
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,12 +49,6 @@
             android:key="gamespace_auto_brightness_disabled"
             android:summary="@string/auto_brightness_disabled_summary"
             android:title="@string/auto_brightness_disabled_title" />
-
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="gamespace_tfgesture_disabled"
-            android:summary="@string/three_screenshot_disabled_summary"
-            android:title="@string/three_screenshot_disabled_title" />
 
         <SwitchPreference
             android:defaultValue="false"
